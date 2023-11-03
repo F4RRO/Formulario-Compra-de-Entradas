@@ -1,0 +1,92 @@
+/* Establezco un fondo azul oscuro y texto blanco para el título para destacar y mejorar la legibilidad. */
+.titulo {
+	background-color: slateblue;
+	color: white;
+	font-family: Tahoma;
+	padding: 10px;
+}
+
+/* Aplico un fondo celeste y texto en azul oscuro al formulario para una apariencia fresca y clara. */
+form {
+	background-color: #87ceeb;
+	color: darkblue;
+	font-weight: bold;
+}
+
+/* Limito el ancho del formulario y del título al 50% para no ocupar toda la pantalla. */
+form, .titulo {
+	width: 50%;
+}
+
+/* Elijo la fuente 'Calibri' para los fieldsets . */
+fieldset {
+	font-family: 'Calibri';
+}
+
+/* Utilizo 'Verdana' para las leyendas de los fieldsets. */
+fieldset legend {
+	font-family: Verdana;
+}
+
+/* Diseño el botón de envío. */
+#boton {
+	padding: 25px;
+	background-color: darkblue;
+	color: skyblue;
+	font-size: 2em;
+	margin-bottom: 15px;
+}
+
+/* Añado margen superior a la categoría de entradas para espaciarla del elemento anterior. */
+#entradas div.dv_categoria {
+	margin-top: 15px;
+}
+
+/* Hago que la etiqueta de categoría se muestre como bloque para que tenga su propia línea. */
+label.lb_categoria {
+	display: block;
+}
+
+/* Agrego un margen inferior al selector de categoría para separarlo del siguiente campo. */
+select#categoria {
+	margin-bottom: 10px;
+}
+
+/* Coloco un margen inferior a cada div dentro de los datos para que no estén tan juntos. */
+#datos div {
+	margin-bottom: 15px;
+}
+
+/* Añado un margen superior al primer div de datos para separarlo del borde del fieldset. */
+#datos div.primero {
+	margin-top: 10px;
+}
+
+/* Presento la etiqueta del método de pago en línea y agrego margen. */
+#pago label.lb_metodo_pago {
+	display: inline-block;
+	margin: 15px 0;
+}
+
+/* Establezco un margen inferior en los divs de pago para mantener un espacio uniforme entre ellos. */
+#pago div {
+	margin-bottom: 5px;
+}
+
+/* Ajusto los márgenes alrededor del checkbox de aceptación de condiciones para que esté visualmente centrado. */
+#pago div.div_acept_condiciones {
+	margin: 15px 0;
+}
+
+/* Defino un ancho fijo para las imágenes de los métodos de pago. */
+#pago img {
+	width: 50px;
+}
+
+/* Personalizo el botón de retorno con un estilo de texto sin subrayado, letra Arial y espaciado negativo. */
+a#boton {
+	text-decoration: none;
+	font-family: Arial;
+	font-weight: 800;
+	letter-spacing: -2px;
+}

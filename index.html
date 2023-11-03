@@ -1,0 +1,116 @@
+<!DOCTYPE html> <!-- Esta línea indica que estamos utilizando HTML5, la última versión de HTML. -->
+
+<html> <!-- Inicio del documento HTML, todo el contenido va dentro de esta etiqueta. -->
+
+<head> <!-- Esta parte es para configurar la información del encabezado de la página. -->
+
+	<meta charset="utf-8"> <!-- Define el conjunto de caracteres utilizado en la página (UTF-8 es muy común y admite muchos caracteres). -->
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Configura cómo se verá la página en dispositivos diferentes. -->
+
+	<title>Venta de entradas</title> <!-- Aquí se establece el título de la página que aparecerá en la pestaña del navegador. -->
+
+	<link rel="stylesheet" href="styles.css"> <!-- Enlaza un archivo CSS llamado "styles.css" para aplicar estilos a la página. -->
+
+</head>
+
+<body> <!-- Inicio del cuerpo de la página, donde se muestra el contenido visible. -->
+
+	<form action="confirmacion.html" method="GET" name="formulario"> <!-- Comienza un formulario para recopilar información del usuario. -->
+		<!-- Aquí empieza la sección para seleccionar la cantidad y categoría de entradas. -->
+
+		<fieldset form="formulario" id="entradas"> <!-- Grupo de elementos relacionados para las entradas. -->
+			<legend>Entradas</legend> <!-- Título del grupo de entradas. -->
+
+			<div> <!-- Inicio de un cuadro para la cantidad de entradas. -->
+				<label for="numero_entradas">Número de entradas:</label> <!-- Etiqueta que indica qué se debe seleccionar. -->
+				<select name="numero_entradas" id="numero_entradas"> <!-- Menú desplegable para elegir la cantidad de entradas. -->
+					<option value="1">1</option> <!-- Opciones para seleccionar la cantidad de entradas. -->
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="dv_categoria"> <!-- Cuadro para seleccionar la categoría de asientos. -->
+				<label for="categoria" class="lb_categoria">Categoría:</label> <!-- Etiqueta que indica qué se debe seleccionar. -->
+				<select name="categoria" id="categoria"> <!-- Menú desplegable para elegir la categoría de asientos. -->
+					<option value="pista_general">Pista General</option> <!-- Opciones de categoría. -->
+					<option value="VIP">VIP</option>
+					<option value="PALCO">PALCO</option>
+				</select>
+			</div>
+
+		</fieldset>
+		<!-- Fin de la sección de selección de entradas. -->
+
+		<!-- Aquí comienza la sección para recopilar datos personales del comprador. -->
+
+		<fieldset form="formulario" id="datos"> <!-- Grupo de elementos relacionados para los datos del comprador. -->
+			<legend>Datos del comprador</legend> <!-- Título del grupo de datos del comprador. -->
+
+			<div class="primero"> <!-- Cuadro para ingresar el nombre del comprador. -->
+				<label for="nombre">Nombre:</label> <!-- Etiqueta que indica qué se debe ingresar. -->
+				<input type="text" name="nombre" id="nombre"> <!-- Campo de entrada de texto para el nombre. -->
+			</div>
+
+			<div> <!-- Cuadro para ingresar los apellidos del comprador. -->
+				<label for="apellidos">Apellidos:</label> <!-- Etiqueta que indica qué se debe ingresar. -->
+				<input type="text" name="apellidos" id="apellidos"> <!-- Campo de entrada de texto para los apellidos. -->
+			</div>
+
+			<div> <!-- Cuadro para ingresar el correo electrónico del comprador. -->
+				<label for="email">E-Mail:</label> <!-- Etiqueta que indica qué se debe ingresar. -->
+				<input type="email" name="email" id="email"> <!-- Campo de entrada de correo electrónico. -->
+			</div>
+
+			<div> <!-- Cuadro para ingresar la fecha de nacimiento del comprador. -->
+				<label for="fecha_nac">Fecha de nacimiento:</label> <!-- Etiqueta que indica qué se debe ingresar. -->
+				<input type="date" name="fecha_nac" id="fecha_nac"> <!-- Campo de entrada de fecha de nacimiento. -->
+			</div>
+
+		</fieldset>
+		<!-- Fin de la sección de recopilación de datos personales del comprador. -->
+
+		<!-- Comienza la sección de opciones de pago. -->
+
+		<fieldset form="formulario" id="pago"> <!-- Grupo de elementos relacionados para la información de pago. -->
+			<legend>Pago</legend> <!-- Título del grupo de información de pago. -->
+
+			<label for="metodo_pago" class="lb_metodo_pago">Selecciona método de pago:</label> <!-- Etiqueta que indica qué se debe seleccionar. -->
+
+			<div> <!-- Opción para pagar con tarjeta Visa. -->
+				<input type="radio" name="metodo_pago" id="pago_visa" value="visa" checked> <!-- Botón de selección. -->
+				<img src="img/visaLogo.png" alt="Logotipo de VISA"> <!-- Imagen del logotipo de Visa. -->
+			</div>
+
+			<div> <!-- Opción para pagar con tarjeta MasterCard. -->
+				<input type="radio" name="metodo_pago" id="pago_mastercard" value="master_card"> <!-- Botón de selección. -->
+				<img src="img/masterLogo.png" alt="Logotipo de Master Card"> <!-- Imagen del logotipo de MasterCard. -->
+			</div>
+
+			<div> <!-- Opción para pagar con PayPal. -->
+				<input type="radio" name="metodo_pago" id="pago_paypal" value="paypal"> <!-- Botón de selección. -->
+				<img src="img/paypalLogo.png" alt="Logotipo de PayPal"> <!-- Imagen del logotipo de PayPal. -->
+			</div>
+
+			<div> <!-- Opción para pagar con Bizum. -->
+				<input type="radio" name="metodo_pago" id="pago_bizum" value="bizum"> <!-- Botón de selección. -->
+				<img src="img/bizumLogo.jpg" alt="Logotipo de Bizum"> <!-- Imagen del logotipo de Bizum. -->
+			</div>
+
+			<div class="div_acept_condiciones"> <!-- Cuadro para aceptar las condiciones de compra. -->
+				<input type="checkbox" name="acept_condiciones" id="acept_condiciones"> <!-- Casilla de verificación. -->
+				<label for="acept_condiciones">Acepto las condiciones de compra</label> <!-- Etiqueta para la casilla de verificación. -->
+			</div>
+
+			<input type="submit" value="Proceder al pago" id="boton"> <!-- Botón para enviar el formulario y proceder al pago. -->
+
+		</fieldset>
+		<!-- Fin de la sección de opciones de pago. -->
+
+	</form>
+
+</body>
+
+</html>
